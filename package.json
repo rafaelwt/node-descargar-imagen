@@ -1,0 +1,14 @@
+{
+  "name": "descargar-imagen",
+  "version": "1.0.0",
+  "description": "descargar imagenes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RWT",
+  "license": "MIT",
+  "dependencies": {
+    "image-downloader": "^3.5.0"
+  }
+}
