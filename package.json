@@ -9,6 +9,8 @@
   "author": "RWT",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.19.0",
+    "fast-csv": "^3.4.0",
     "image-downloader": "^3.5.0"
   }
 }

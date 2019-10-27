@@ -6,12 +6,12 @@ const url = "https://trep.oep.org.bo";
 const path = "D:\\actas-elecciones";
 let pathFile = '';
  async function downloadIMG() {
-    for (var i = 0; i < imagenes.length; i++) {
+    for (let i = 0; i < imagenes.length; i++) {
         try {
             pathFile = `${path}\\${imagenes[i]}.jpg`
             if(!fs.existsSync(pathFile)){
                 const options = {
-                    url: `${url}/resul/imgActa/${imagenes[i]}.jpg`,
+                    url: `${url}/resul/imgActa/${imagenes[i]}1.jpg`,
                     dest: path
                 }
                 const { filename, image } = await download.image(options);
