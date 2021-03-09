@@ -2,8 +2,9 @@ const download = require('image-downloader');
 const actas = require('./actas.datos');
 const fs = require('fs');
 var imagenes = actas.array_actas;
-const url = "https://trep.oep.org.bo";
-const path = "D:\\actas-elecciones";
+// const url = "https://trep.oep.org.bo";
+const url = "https://s3.amazonaws.com/sn-archivo-computo/actas"
+const path = "E:\\actas-elecciones";
 let pathFile = '';
  async function downloadIMG() {
     for (let i = 0; i < imagenes.length; i++) {
@@ -11,7 +12,8 @@ let pathFile = '';
             pathFile = `${path}\\${imagenes[i]}.jpg`
             if(!fs.existsSync(pathFile)){
                 const options = {
-                    url: `${url}/resul/imgActa/${imagenes[i]}1.jpg`,
+                   //  url: `${url}/resul/imgActa/${imagenes[i]}1.jpg`,
+                   url: `${url}/${imagenes[i]}6.jpg`,
                     dest: path
                 }
                 const { filename, image } = await download.image(options);
