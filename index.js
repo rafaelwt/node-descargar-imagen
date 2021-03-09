@@ -19,7 +19,7 @@ const tipo = 6;              // 6 = alcalde ,   2 = Gobernador
                     dest: path
                 }
                 const { filename, image } = await download.image(options);
-                console.log(filename, i);
+                console.log(filename, i + 1);
             } else {
                 console.log(`El archivo ya existe ${imagenes[i]}.jpg`)
             }
