@@ -6,6 +6,8 @@ var imagenes = actas.array_actas;
 const url = "https://s3.amazonaws.com/sn-archivo-computo/actas"
 const path = "E:\\actas-elecciones";
 let pathFile = '';
+
+const tipo = 6;              // 6 = alcalde ,   2 = Gobernador
  async function downloadIMG() {
     for (let i = 0; i < imagenes.length; i++) {
         try {
@@ -13,7 +15,7 @@ let pathFile = '';
             if(!fs.existsSync(pathFile)){
                 const options = {
                    //  url: `${url}/resul/imgActa/${imagenes[i]}1.jpg`,
-                   url: `${url}/${imagenes[i]}6.jpg`,
+                   url: `${url}/${imagenes[i]}${tipo}.jpg`,
                     dest: path
                 }
                 const { filename, image } = await download.image(options);
